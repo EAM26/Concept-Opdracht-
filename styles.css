@@ -28,7 +28,7 @@ Grijs #7A7A7A (voor de service-tegel tekst);*/
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /*border: 1px solid red;*/
+    border: 1px solid red;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -63,6 +63,13 @@ button, a {
     font-size: 12px;
 }
 
+p {
+    font-size: 12px;
+}
+
+label {
+    font-size: 12px;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -163,7 +170,6 @@ header button {
 .introduction p {
     margin: 50px 0 20px 0;
     color: black;
-    font-size: 14px;
 }
 
 .introduction a {
@@ -171,7 +177,7 @@ header button {
     color: #4845E4;
 }
 
-/* --------------- 4.2 Projects ------------------- */
+/* --------------- 4.3 Projects ------------------- */
 
 .projects {
     background-color: #F3F6F9;
@@ -179,6 +185,8 @@ header button {
 
 .projects article {
     padding: 20px;
+    display: flex;
+    flex-direction: row;
 }
 
 .projects article:nth-child(even) {
@@ -210,16 +218,68 @@ header button {
 }
 
 .inner-article p {
-    font-size: 14px;
     text-transform: uppercase;
     color: #4845E4;
 }
 
 .inner-article * {
     margin: 30px 0;
+
 }
 
+/* --------------- 4.4 Services ------------------- */
+.services-article {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.service-block article {
+    flex: 0 1 360px;
+    padding: 10px 30px;
+    margin: 20px 10px;
+    border: 1px solid #5722CD;
+    min-height: 500px;
+
+}
+/* --------------- 4.5 Form ------------------- */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 20px 0;
+    min-width: 50%;
+
+    /*min-width: 300px;*/
+    /*justify-content: center;*/
+    /*background-color: green;*/
+}
+
+.form p {
+    padding: 20px 0;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    padding: 0 20px;
+}
+
+#message {
+    max-width: 100%;
+}
+
+.form-button {
+    align-self: center;
+    background-color: green;
+}
+/*.form-intro {*/
+/*    width: 100%;*/
+/*}*/
 
 
 
