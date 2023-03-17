@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+/*color palette
+Paars #5722CD;
+Blauw #4845E4;
+Roze #ED4385;
+Zwart #0C0C0C (voor standaard tekst);
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:
+Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst);*/
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+    font-family: 'Roboto', sans-serif;
+}
+
+.outer-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 1200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+
+
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+button, a {
+    font-size: 12px;
+}
+
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+
+
+
+
+
+
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    /*background: rgb(72,69,228);*/
+    background: linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 75%);
+    color: white;
+}
+
+.header-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-content-container h1 {
+    padding: 70px 0 20px 0;
+}
+
+.header-content-container button {
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+
+}
+
+.navbar li {
+    padding: 0 20px;
+}
+
+.navbar li a {
+     text-decoration: none;
+     color: white;
+ }
+
+/*h1 {*/
+/*    padding: 50px 0 0 0;*/
+/*}*/
+
+header button {
+    border-radius: 15px;
+    background-color: #ED4385;
+    color: white;
+    padding: 5px 10px;
+    box-shadow: 4px 2px 4px #000000;
+}
+
+.header-img {
+    background-image: url("./assets/squiggle_line_stripe.svg");
+    height: 50px;
+    width: 80px;
+}
+
+
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.introduction {
+    color: #4845E4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4em;
+}
+
+.introduction h3 {
+    margin: 10px;
+}
+
+.introduction p {
+    margin: 50px 0 20px 0;
+    color: black;
+    font-size: 14px;
+}
+
+.introduction a {
+    text-decoration: none;
+    color: #4845E4;
+}
+
+/* --------------- 4.2 Projects ------------------- */
+
+.projects {
+    background-color: #F3F6F9;
+}
+
+.projects article {
+    padding: 20px;
+}
+
+.projects article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+.projects img {
+    width: 100%;
+    box-shadow: 4px 2px 4px #000000;
+
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.inner-article {
+    padding: 0 20px;
+    flex: 0 1 70%;
+}
+
+.case-studies-img {
+    background-image: url("./assets/squiggle_line.svg");
+    height: 6px;
+    width: 40px;
+}
+
+.inner-article p {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #4845E4;
+}
+
+.inner-article * {
+    margin: 30px 0;
+}
+
+
+
+
+
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
