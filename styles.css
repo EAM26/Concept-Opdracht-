@@ -91,6 +91,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 150px;
 }
 
 .header-content-container h1 {
@@ -124,10 +125,10 @@ header {
  }
 
 header button {
-    border-radius: 15px;
+    border-radius: 25px;
     background-color: #ED4385;
     color: white;
-    padding: 5px 10px;
+    padding: 15px 20px;
     box-shadow: 4px 2px 4px #000000;
 }
 
@@ -135,6 +136,7 @@ header button {
     background-image: url("./assets/squiggle_line_stripe.svg");
     height: 50px;
     width: 80px;
+    margin-top: 100px;
 }
 
 
@@ -246,6 +248,16 @@ header button {
     width: 60px;
 }
 
+.services-article h4 {
+    color: #5722CD;
+}
+
+.services-article p {
+    color: gray;
+    text-align: left;
+}
+
+
 /* --------------- 4.5 Form ------------------- */
 
 #contact-form {
@@ -298,6 +310,32 @@ header button {
 footer {
     background-color: black;
     color: white;
+    padding: 15px 0;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .header-content-container {
+        padding: 0 50px;
+    }
+
+    .projects article:nth-child(n) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .image-wrapper {
+        flex: 0 1 200px;
+    }
+
+    .inner-article {
+        padding: 0;
+    }
+
+}
