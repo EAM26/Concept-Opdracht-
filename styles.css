@@ -28,8 +28,12 @@ Grijs #7A7A7A (voor de service-tegel tekst);*/
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
 }
 
 .outer-container {
@@ -46,12 +50,7 @@ Grijs #7A7A7A (voor de service-tegel tekst);*/
     justify-content: center;
     align-items: center;
     text-align: center;
-
-
 }
-
-
-
 
 
 /* ------------------------------- 2. Typography ----------------------------------- */
@@ -80,12 +79,6 @@ label {
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 
-
-
-
-
-
-
 /* --------------- 4.1 Header ------------------------- */
 
 header {
@@ -109,7 +102,6 @@ header {
     text-transform: uppercase;
 }
 
-
 .navbar {
     width: 100%;
     display: flex;
@@ -120,7 +112,6 @@ header {
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
-
 }
 
 .navbar li {
@@ -131,10 +122,6 @@ header {
      text-decoration: none;
      color: white;
  }
-
-/*h1 {*/
-/*    padding: 50px 0 0 0;*/
-/*}*/
 
 header button {
     border-radius: 15px;
@@ -151,11 +138,10 @@ header button {
 }
 
 
-
 /* --------------- 4.2 Introduction ------------------- */
 
 .introduction {
-    color: #4845E4;
+    color: #5722CD;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,8 +160,9 @@ header button {
 
 .introduction a {
     text-decoration: none;
-    color: #4845E4;
+    color: #5722CD;
 }
+
 
 /* --------------- 4.3 Projects ------------------- */
 
@@ -184,7 +171,7 @@ header button {
 }
 
 .projects article {
-    padding: 20px;
+    padding: 40px 20px;
     display: flex;
     flex-direction: row;
 }
@@ -193,11 +180,9 @@ header button {
     flex-direction: row-reverse;
 }
 
-
 .projects img {
     width: 100%;
     box-shadow: 4px 2px 4px #000000;
-
 }
 
 .image-wrapper {
@@ -207,8 +192,13 @@ header button {
 }
 
 .inner-article {
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 30px;
     flex: 0 1 70%;
+    text-align: left;
 }
 
 .case-studies-img {
@@ -219,12 +209,12 @@ header button {
 
 .inner-article p {
     text-transform: uppercase;
-    color: #4845E4;
+    color: #5722CD;
+    font-weight: bold;
 }
 
 .inner-article * {
-    margin: 30px 0;
-
+    margin: 10px 0;
 }
 
 /* --------------- 4.4 Services ------------------- */
@@ -234,7 +224,6 @@ header button {
     flex-wrap: wrap;
     justify-content: center;
     padding: 40px 0;
-
 }
 
 .service-block article {
@@ -268,7 +257,7 @@ header button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 0 20px 0;
+    padding: 50px 0 20px 0;
     min-width: 50%;
 }
 
@@ -280,8 +269,7 @@ header button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 70%;
-    padding: 0 20px;
+    width: 100%;
     text-align: left;
 }
 
@@ -291,17 +279,19 @@ header button {
     padding: 10px 0;
 }
 
-.form-element::placeholder {
+.form-element input::placeholder, textarea::placeholder {
     padding-left: 10px;
 }
 
-/*#message {*/
-/*    max-width: 100%;*/
-/*}*/
-
 .form-button {
     align-self: center;
+    border-radius: 25px;
+    background-color: #ED4385;
+    color: white;
+    padding: 15px 60px;
+
 }
+
 
 /* --------------- 4.6 Footer ------------------- */
 
