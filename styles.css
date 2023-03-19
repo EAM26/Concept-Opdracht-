@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
-/*color palette
-Paars #5722CD;
-Blauw #4845E4;
-Roze #ED4385;
-Zwart #0C0C0C (voor standaard tekst);
-Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:
-Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
-Grijs #7A7A7A (voor de service-tegel tekst);*/
+
+
+
 
 /*////////////////////////
     Table of Contents
@@ -28,8 +23,9 @@ Grijs #7A7A7A (voor de service-tegel tekst);*/
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /*border: 1px solid red;*/
     font-family: 'Roboto', sans-serif;
+    color: var(--standard-txt-color);
+    border: 1px solid red;
 }
 
 body {
@@ -74,6 +70,19 @@ label {
 
 /* --------------- 3.1 Reusables ----------------------- */
 
+/* Color Palette*/
+:root {
+    --standard-txt-color: #0C0C0C;
+    --txt-color-white: #FFFFFF;
+    --txt-color-purple: #5722CD;
+    --bg-color-blue: #4845E4;
+    --button-bg-color: #ED4385;
+    --floating-txt-color: #F2F0FF;
+    --projects-bg-color: #F3F6F9;
+    --service-txt-color: #7A7A7A;
+
+}
+
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
@@ -82,20 +91,20 @@ label {
 /* --------------- 4.1 Header ------------------------- */
 
 header {
-    /*background: rgb(72,69,228);*/
-    background: linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 75%);
-    color: white;
+    position: relative;
+    background: linear-gradient(45deg, rgba(72,69,228,1) 0%, rgba(72,69,228,1) 93%);
 }
 
 .header-content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 150px;
+    padding: 50px 150px;
 }
 
-.header-content-container h1 {
-    padding: 70px 0 20px 0;
+.header-content-container h1, h4,button {
+    padding: 30px 0 20px 0;
+    color: var(--txt-color-white)
 }
 
 .header-content-container button {
@@ -113,23 +122,25 @@ header {
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
+
 }
 
 .navbar li {
     padding: 0 20px;
+
 }
 
 .navbar li a {
      text-decoration: none;
-     color: white;
+    color: var(--txt-color-white);
  }
 
 header button {
+    border: 0;
     border-radius: 25px;
-    background-color: #ED4385;
-    color: white;
+    background-color: var(--button-bg-color);
     padding: 15px 20px;
-    box-shadow: 4px 2px 4px #000000;
+    box-shadow: 4px 2px 4px #555555;
 }
 
 .header-img {
@@ -139,11 +150,22 @@ header button {
     margin-top: 100px;
 }
 
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 100vw solid red;
+    border-right: 1px solid transparent;
+    border-top: 70px solid transparent;
+    position: absolute;
+    left:0;
+    bottom: 0;
+
+}
+
 
 /* --------------- 4.2 Introduction ------------------- */
 
 .introduction {
-    color: #5722CD;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,19 +179,24 @@ header button {
 
 .introduction p {
     margin: 50px 0 20px 0;
-    color: black;
+    color: var(--standard-txt-color);
+
 }
 
 .introduction a {
     text-decoration: none;
-    color: #5722CD;
+    color: var(--txt-color-purple);
+}
+
+.introduction h3, a {
+    color: var(--txt-color-purple);
 }
 
 
 /* --------------- 4.3 Projects ------------------- */
 
 .projects {
-    background-color: #F3F6F9;
+    background-color: var(--projects-bg-color);
 }
 
 .projects article {
@@ -211,7 +238,7 @@ header button {
 
 .inner-article p {
     text-transform: uppercase;
-    color: #5722CD;
+    color: var(--txt-color-purple);
     font-weight: bold;
 }
 
@@ -232,7 +259,7 @@ header button {
     flex: 0 1 300px;
     padding: 30px;
     margin: 20px 10px;
-    border: 1px solid #5722CD;
+    border: 1px solid var(--txt-color-purple);
     min-height: 300px;
     display: flex;
     flex-direction: column;
@@ -249,11 +276,11 @@ header button {
 }
 
 .services-article h4 {
-    color: #5722CD;
+    color: var(--txt-color-purple);
 }
 
 .services-article p {
-    color: gray;
+    color: var(--service-txt-color);
     text-align: left;
 }
 
@@ -261,8 +288,7 @@ header button {
 /* --------------- 4.5 Form ------------------- */
 
 #contact-form {
-    background: linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 75%);
-    color: white;
+    background: linear-gradient(45deg, rgba(72,69,228,1) 0%, rgba(72,69,228,1) 93%);
 }
 
 .form {
@@ -271,6 +297,10 @@ header button {
     align-items: center;
     padding: 50px 0 20px 0;
     min-width: 50%;
+}
+
+.form h2, p, label, input {
+    color: var(--txt-color-white);
 }
 
 .form p {
@@ -298,10 +328,8 @@ header button {
 .form-button {
     align-self: center;
     border-radius: 25px;
-    background-color: #ED4385;
-    color: white;
+    background-color: var(--button-bg-color);
     padding: 15px 60px;
-
 }
 
 
@@ -309,9 +337,11 @@ header button {
 
 footer {
     background-color: black;
-    color: white;
     padding: 15px 0;
 }
+
+
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
 
@@ -333,7 +363,6 @@ footer {
     .image-wrapper {
         flex: 0 1 200px;
     }
-
     .inner-article {
         padding: 0;
     }
