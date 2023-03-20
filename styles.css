@@ -25,7 +25,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     color: var(--standard-txt-color);
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 body {
@@ -99,7 +99,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 150px;
+    padding: 50px 150px 30px 150px;
 }
 
 .header-content-container h1, h4,button {
@@ -131,7 +131,7 @@ header {
 }
 
 .navbar li a {
-     text-decoration: none;
+    text-decoration: none;
     color: var(--txt-color-white);
  }
 
@@ -145,21 +145,20 @@ header button {
 
 .header-img {
     background-image: url("./assets/squiggle_line_stripe.svg");
-    height: 50px;
+    height: 80px;
     width: 80px;
     margin-top: 100px;
 }
 
-.triangle {
+.triangle-header {
     width: 0;
     height: 0;
-    border-left: 100vw solid red;
+    border-left: 100vw solid var(--txt-color-white);
     border-right: 1px solid transparent;
-    border-top: 70px solid transparent;
+    border-top: 60px solid transparent;
     position: absolute;
     left:0;
     bottom: 0;
-
 }
 
 
@@ -193,16 +192,33 @@ header button {
 }
 
 
+
+
 /* --------------- 4.3 Projects ------------------- */
+
+.triangle-projects {
+
+    border-left: 100vw solid var(--projects-bg-color);
+    border-right: 1px solid transparent;
+    border-top: 60px solid transparent;
+    position: absolute;
+    left:0;
+    top: -60px;
+}
 
 .projects {
     background-color: var(--projects-bg-color);
+    position: relative;
 }
 
 .projects article {
     padding: 40px 20px;
     display: flex;
     flex-direction: row;
+}
+
+.projects article:last-of-type {
+    padding-bottom: 100px;
 }
 
 .projects article:nth-child(even) {
@@ -247,6 +263,29 @@ header button {
 }
 
 /* --------------- 4.4 Services ------------------- */
+
+
+.service-articles {
+    /*background-color: purple;*/
+    position: relative;
+    /*padding-bottom: 60px;*/
+}
+
+.triangle-service-top {
+    border-left: 100vw solid var(--txt-color-white);
+    border-right: 1px solid transparent;
+    border-top: 60px solid transparent;
+    position: absolute;
+    top: -60px;
+}
+
+.triangle-service-bottom {
+    border-right: 100vw solid var(--txt-color-white);
+    border-left: 1px solid transparent;
+    border-bottom: 60px solid transparent;
+    position: absolute;
+    bottom: -60px;
+}
 .services-article {
     display:flex;
     flex-direction: row;
@@ -265,6 +304,7 @@ header button {
     flex-direction: column;
     align-items: flex-start;
     box-shadow: 4px 2px 4px #D3D6D9;
+
 }
 
 .service-block article * {
@@ -295,7 +335,7 @@ header button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0 20px 0;
+    padding: 100px 0 20px 0;
     min-width: 50%;
 }
 
