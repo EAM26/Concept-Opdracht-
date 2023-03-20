@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+
+
+
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: var(--standard-txt-color);
+    /*border: 1px solid red;*/
+}
+
+body {
+    height: 100vh;
+}
+
+.outer-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 1200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+button, a {
+    font-size: 12px;
+}
+
+p {
+    font-size: 12px;
+}
+
+label {
+    font-size: 12px;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/* Color Palette*/
+:root {
+    --standard-txt-color: #0C0C0C;
+    --txt-color-white: #FFFFFF;
+    --txt-color-purple: #5722CD;
+    --bg-color-blue: #4845E4;
+    --button-bg-color: #ED4385;
+    --floating-txt-color: #F2F0FF;
+    --projects-bg-color: #F3F6F9;
+    --service-txt-color: #7A7A7A;
+
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    position: relative;
+    background-image: url("./assets/noise-texture.png"),linear-gradient(45deg, rgba(72,69,228,1) 0%, rgba(87, 34, 100,1) 93%);
+}
+
+.header-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 150px 30px 150px;
+}
+
+.header-content-container h1, h4,button {
+    padding: 30px 0 20px 0;
+    color: var(--txt-color-white)
+}
+
+.header-content-container button {
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+
+}
+
+.navbar li {
+    padding: 0 20px;
+
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: var(--txt-color-white);
+ }
+
+header button {
+    border: 0;
+    border-radius: 25px;
+    background-color: var(--button-bg-color);
+    padding: 15px 20px;
+    box-shadow: 4px 2px 4px #555555;
+}
+
+.header-img {
+    background-image: url("./assets/squiggle_line_stripe.svg");
+    height: 80px;
+    width: 80px;
+    margin-top: 100px;
+}
+
+
+
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.outer-welcome {
+    position: relative;
+}
+
+.triangle-intro {
+    width: 0;
+    height: 0;
+    border-left: 100vw solid var(--txt-color-white);
+    border-right: 1px solid transparent;
+    border-top: 60px solid transparent;
+    position: absolute;
+    left:0;
+    top: -60px;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4em;
+    position: relative;
+}
+
+.introduction:after {
+    content: "hello";
+    color: var(--floating-txt-color);
+    font-size: 250px;
+    position: absolute;
+    font-weight: bold;
+    z-index: -1;
+}
+
+.introduction h3 {
+    margin: 10px;
+}
+
+.introduction p {
+    margin: 50px 0 20px 0;
+    color: var(--standard-txt-color);
+
+}
+
+.introduction a {
+    text-decoration: none;
+    color: var(--txt-color-purple);
+}
+
+.introduction h3, a {
+    color: var(--txt-color-purple);
+}
+
+/* --------------- 4.3 Projects ------------------- */
+
+.squiggle {
+    position: relative;
+}
+
+.squiggle:after {
+    position: absolute;
+    content: "";
+    background-image: url("./assets/squiggle_line.svg");
+    height: 6px;
+    width: 40px;
+    left: 0;
+    top: 40px;
+
+}
+.triangle-projects {
+    border-left: 100vw solid var(--projects-bg-color);
+    border-right: 1px solid transparent;
+    border-top: 60px solid transparent;
+    position: absolute;
+    left:0;
+    top: -60px;
+    z-index: 3;
+}
+
+.projects {
+    background-color: var(--projects-bg-color);
+    position: relative;
+}
+
+.projects-inner {
+    position: relative;
+    padding-top: 50px;
+    z-index: 2;
+}
+
+.projects-inner:before {
+    content: "work";
+    color: white;
+    font-size: 250px;
+    position: absolute;
+    font-weight: bold;
+    top: -70px;
+    z-index: 1;
+}
+
+.projects article {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+
+.projects article:last-of-type {
+    padding-bottom: 100px;
+}
+
+.projects article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.projects img {
+    width: 100%;
+    box-shadow: 4px 2px 4px #DDDDDD;
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.inner-article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 30px;
+    flex: 0 1 70%;
+    text-align: left;
+}
+
+/*.case-studies-img {*/
+/*    background-image: url("./assets/squiggle_line.svg");*/
+/*    height: 6px;*/
+/*    width: 40px;*/
+/*}*/
+
+.inner-article a {
+    text-transform: uppercase;
+    color: var(--txt-color-purple);
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+.inner-article a::after {
+    content: "";
+    width: 10px;
+    height: 1px;
+    background-color: var(--txt-color-purple);
+    position: absolute;
+    top: 7px;
+    left: 90px;
+}
+
+.inner-article a:hover::after {
+    transition: width .5s ease-in-out;
+    width: 50px ;
+
+}
+
+
+
+.inner-article * {
+    margin: 10px 0;
+}
+
+/* --------------- 4.4 Services ------------------- */
+
+
+.service-articles {
+    position: relative;
+}
+
+.triangle-service-top {
+    border-left: 100vw solid var(--txt-color-white);
+    border-right: 1px solid transparent;
+    border-top: 60px solid transparent;
+    position: absolute;
+    top: -60px;
+}
+
+.triangle-service-bottom {
+    border-right: 100vw solid var(--txt-color-white);
+    border-left: 1px solid transparent;
+    border-bottom: 60px solid transparent;
+    position: absolute;
+    bottom: -60px;
+}
+.services-article {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 120px 0 40px 0;
+    position: relative;
+    z-index: 1;
+
+}
+
+.services-article:before {
+    content: "services";
+    color: var(--floating-txt-color);
+    font-size: 250px;
+    position: absolute;
+    top: -60px;
+    font-weight: bold;
+    z-index: -1;
+
+}
+
+.service-block article {
+    flex: 0 1 300px;
+    padding: 30px;
+    margin: 20px 10px;
+    border: 1px solid var(--txt-color-purple);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 4px 2px 4px #D3D6D9;
+    background-color: #FFFFFF;
+    z-index: 0;
+
+}
+
+.service-block article * {
+    padding: 10px 0;
+}
+
+.services-article article img {
+    width: 60px;
+
+}
+
+.services-article h4 {
+    color: var(--txt-color-purple);
+}
+
+.services-article p {
+    color: var(--service-txt-color);
+    text-align: left;
+}
+
+
+/* --------------- 4.5 Form ------------------- */
+
+#contact-form {
+    background-image: url("./assets/noise-texture.png"),linear-gradient(45deg, rgba(72,69,228,1) 0%, rgba(87, 34, 100,1) 93%);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0 20px 0;
+    min-width: 50%;
+}
+
+.form h2, p, label, input {
+    color: var(--txt-color-white);
+}
+
+.form p {
+    padding: 20px 0;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    text-align: left;
+}
+
+.form-element *:nth-child(even) {
+    width: 100%;
+    margin: 0 10px 20px 0;
+    padding: 10px 0;
+}
+
+.form-element input::placeholder, textarea::placeholder {
+    padding-left: 10px;
+}
+
+.form-button {
+    align-self: center;
+    border-radius: 25px;
+    background-color: var(--button-bg-color);
+    padding: 15px 60px;
+}
+
+
+/* --------------- 4.6 Footer ------------------- */
+
+footer {
+    background-color: black;
+    padding: 15px 0;
+}
+
+
+
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .header-content-container {
+        padding: 0 50px;
+    }
+
+    .projects article:nth-child(n) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-wrapper {
+        flex: 0 1 200px;
+    }
+    .inner-article {
+        padding: 0;
+    }
+
+    .introduction:after{
+        font-size: 110px;
+        top: 15px;
+    }
+
+    .projects-inner:before {
+        font-size: 110px;
+        top: 10px;
+        z-index: 1;
+    }
+
+    .services-article:before {
+        font-size: 110px;
+        top: 60px;
+
+    }
+
+}
