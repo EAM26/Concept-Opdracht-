@@ -150,7 +150,16 @@ header button {
     margin-top: 100px;
 }
 
-.triangle-header {
+
+
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.outer-welcome {
+    position: relative;
+}
+
+.triangle-intro {
     width: 0;
     height: 0;
     border-left: 100vw solid var(--txt-color-white);
@@ -158,11 +167,8 @@ header button {
     border-top: 60px solid transparent;
     position: absolute;
     left:0;
-    bottom: 0;
+    top: -60px;
 }
-
-
-/* --------------- 4.2 Introduction ------------------- */
 
 .introduction {
     display: flex;
@@ -170,6 +176,16 @@ header button {
     align-items: center;
     text-align: center;
     padding: 4em;
+    position: relative;
+}
+
+.introduction:after {
+    content: "hello";
+    color: var(--floating-txt-color);
+    font-size: 250px;
+    position: absolute;
+    font-weight: bold;
+    z-index: -1;
 }
 
 .introduction h3 {
@@ -191,19 +207,17 @@ header button {
     color: var(--txt-color-purple);
 }
 
-
-
-
 /* --------------- 4.3 Projects ------------------- */
 
-.triangle-projects {
 
+.triangle-projects {
     border-left: 100vw solid var(--projects-bg-color);
     border-right: 1px solid transparent;
     border-top: 60px solid transparent;
     position: absolute;
     left:0;
     top: -60px;
+    z-index: 3;
 }
 
 .projects {
@@ -211,10 +225,26 @@ header button {
     position: relative;
 }
 
+.projects-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.projects-inner:before {
+    content: "work";
+    color: white;
+    font-size: 250px;
+    position: absolute;
+    font-weight: bold;
+    top: 20px;
+    z-index: 1;
+}
+
 .projects article {
     padding: 40px 20px;
     display: flex;
     flex-direction: row;
+    z-index: 2;
 }
 
 .projects article:last-of-type {
@@ -227,7 +257,7 @@ header button {
 
 .projects img {
     width: 100%;
-    box-shadow: 4px 2px 4px #000000;
+    box-shadow: 4px 2px 4px #DDDDDD;
 }
 
 .image-wrapper {
@@ -266,9 +296,7 @@ header button {
 
 
 .service-articles {
-    /*background-color: purple;*/
     position: relative;
-    /*padding-bottom: 60px;*/
 }
 
 .triangle-service-top {
@@ -292,6 +320,16 @@ header button {
     flex-wrap: wrap;
     justify-content: center;
     padding: 40px 0;
+    position: relative;
+}
+
+.services-article:after {
+    content: "services";
+    color: var(--floating-txt-color);
+    font-size: 250px;
+    position: absolute;
+    font-weight: bold;
+    z-index: -1;
 }
 
 .service-block article {
